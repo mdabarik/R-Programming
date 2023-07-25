@@ -1,4 +1,5 @@
 
+# Class 2: R Programming (NK Sir)
 
 # Average
 getAvg <- function(vector) {
@@ -43,7 +44,6 @@ getSum(1:100)
   
 seq(2, 100, 2)
   
-
 
 
 
