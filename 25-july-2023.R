@@ -50,6 +50,10 @@ seq(2, 100, 2)
 #Arithmetic mean, Geometric Mean, Harmonic Mean, Variance, Coefficient of Variation, 
 #Skewness, Curtosis, moment function
 
+#Homework (For All)
+#implment function for
+#Arithmetic mean, Geometric Mean, Harmonic Mean 
+
 
 
 
