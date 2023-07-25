@@ -38,10 +38,11 @@ getGPA <- function(credit, gpa) {
 # Insert your credit's and gpa's 
 credit <- c(3, 2, 3, 3, 3, 2)
 gpa <-   c(3.25, 3.5, 4, 3.25, 3, 3.5)
-getGPA(credit, gpa)
+getGPA(credit, gpa) # getGPA() function calling
 
-getSum(1:100)
+getSum(1:100)  # getSum() function calling
   
+# Sequence from 2 to 100 only even number
 seq(2, 100, 2)
   
 
