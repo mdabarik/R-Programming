@@ -46,8 +46,9 @@ getSum(1:100)  # getSum() function calling
 seq(2, 100, 2)
   
 
-
-
+# Home Work (Only for Md. A. Barik)
+#Arithmetic mean, Geometric Mean, Harmonic Mean, Variance, Coefficient of Variation, 
+#Skewness, Curtosis, moment function
 
 
 
