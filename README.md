@@ -85,7 +85,7 @@ To understand the skewness using the third moment, the following general rules c
 Skewness is an important measure in statistics as it helps to identify the shape and symmetry of the data distribution. Skewed data can impact statistical analyses and decision-making, so understanding the skewness is crucial in various fields such as finance, economics, and engineering.
 
 
-## Fourth moment
+## Fourth moment (Kurtosis)
 The fourth moment of a dataset or a probability distribution is a statistical measure that quantifies the kurtosis of the data. Kurtosis is a measure of the "tailedness" or the sharpness of the peak of the probability distribution or dataset relative to the normal distribution. It provides information about the presence of outliers or extreme values in the data.
 
 The fourth moment is often denoted as μ₄. For a dataset with 'n' data points and a mean (average) of 'μ', the formula for the fourth moment is:
