@@ -35,7 +35,7 @@ get_harmonic_mean <- function(vector) {
   # sum of (1/x₁) + (1/x₂) ...
   sum_reciprocals = 0 # 1/n consider reciprocals
   for (x in vector) {
-    sum_reciprocals = sum_reciprocals + x;
+    sum_reciprocals = sum_reciprocals + (1/x);
   }
   hm = n / sum_reciprocals
   return (hm)
