@@ -44,6 +44,7 @@ get_harmonic_mean <- function(vector) {
 get_harmonic_mean(1:100)
 
 
+View(1:100)
 
 
 
