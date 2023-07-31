@@ -22,6 +22,6 @@ View(dataset)
 # replace column A with the median of col A
 median <- median(dataset$A, na.rm = TRUE)
 dataset$A[is.na(dataset$A)] <- median
-
+View(dataset)
 
 
