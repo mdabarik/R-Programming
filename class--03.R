@@ -67,7 +67,9 @@ for (i in obs) {
   sm <- sm + x[i]
 }
 
-
+# visualization
+hist(x, probability = TRUE)
+plot(density(x))
 
 
 
