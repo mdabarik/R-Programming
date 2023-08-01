@@ -29,10 +29,11 @@ get_mean <- function(x) {
 get_mean(x)
 
 # Home Work -- class 3
-# generate x from poisson, replace 5 randomly missing
-# generate y from normal with mean of poisson*6 and replace missing with the 
+# generate x from poisson, replace 5 data randomly as NA (missing)
+# generate y from normal with mean, mean(poisson)*6 
+# replace missing of poisson with the 
 # mean of poisson
-# box plot
+# draw boxplot
 
 # IQR -> Interquatile range
 
@@ -67,9 +68,22 @@ for (i in obs) {
   sm <- sm + x[i]
 }
 
-# visualization
+# visualization (histogram)
 hist(x, probability = TRUE)
 plot(density(x))
+
+# barplot
+p <- table(x)
+barplot(p)
+
+# ?barplot for help
+
+
+
+
+
+
+
 
 
 
