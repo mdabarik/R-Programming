@@ -25,3 +25,14 @@ dataset$A[is.na(dataset$A)] <- median
 View(dataset)
 
 
+# AM, GM, HM, WM, Variance, Moment, Skewness, kurtosis, corelation
+
+# 2, 3, 3, 2, 1
+# 2.27
+
+
+
+
+
+
+
