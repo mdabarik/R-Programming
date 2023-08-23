@@ -14,6 +14,7 @@ lambda <- 3  # lamda of poisson dist
 
 # generating x from poisson
 x <- rpois(n, lambda)
+View(x)
 
 # missing values in x
 missing_indices <- sample(1:n, 5)
