@@ -109,9 +109,39 @@ sd_result <- get_sd(sample_data)
 skewness_result <- get_skewness(sample_data)
 kurtosis_result <- get_kurtosis(sample_data)
 
-# Printing results
-cat("Mean:", mean_result, "\n")
-cat("Variance:", variance_result, "\n")
-cat("Standard Deviation:", sd_result, "\n")
-cat("Skewness:", skewness_result, "\n")
-cat("Kurtosis:", kurtosis_result, "\n")
+
+
+# rth moments
+# rthMoment = Σ (xᵢ - μ)^r / (n * sd^r )
+rthMoments <- function(vector, r) {
+  variance = get_variance(vector)
+  n = length(vector)
+  xiMeuR = 0
+  for (x in vector) {
+    xiMeuR = xiMeuR + (x - get_arithmetic_mean(vector))^r
+  }
+  return (xiMeuR / (n * variance^(r/2)));
+}
+
+rthMoments(2:50, 4)
+
+
+inorder <- function(root) {
+  # 1234567890987654321 ... 555554565456456345
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
