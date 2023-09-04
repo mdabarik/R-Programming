@@ -8,7 +8,6 @@ computeFactorial = function(x) {
   return (factorial)
 }
 
-
 # permutation: nPr = n! / (n-r)!
 computePermuation = function(n, r) {
   nFactorial = computeFactorial(n) # n!
@@ -23,3 +22,19 @@ computeCombination = function(n, r) {
   rFactorial = computeFactorial(r) # r!
   return (nFactorial / (nrFactorial * rFactorial))
 }
+
+computeCombination(4, 3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

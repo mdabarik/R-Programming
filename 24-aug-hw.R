@@ -47,7 +47,7 @@ get_harmonic_mean(1:100)
 # 1. mean (or average), Mean (μ) = Σ (xᵢ) / n
 # 2. variance and standard deviation, Variance σ² = Σ (xᵢ - μ)² / n
 # 3. skewness, Skewness (μ₃) = Σ ((xᵢ - μ)³ / (n * σ³))
-# 4. kurtosis, Kurtosis (μ₄) = (Σ (xᵢ - μ)⁴ / n) / σ⁴
+# 4. kurtosis, Kurtosis (μ₄) = (Σ (xᵢ - μ)⁴ / (n * σ⁴)
 
 #################### First Moment ####################
 # formula to compute mean is -> (μ) = Σ (xᵢ) / n
@@ -125,10 +125,6 @@ rthMoments <- function(vector, r) {
 
 rthMoments(2:50, 4)
 
-
-inorder <- function(root) {
-  # 1234567890987654321 ... 555554565456456345
-}
 
 
 
