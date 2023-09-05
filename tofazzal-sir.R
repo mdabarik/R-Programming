@@ -1,6 +1,7 @@
 
 # dataset
-X <- c(28, 26, 33, 24, 34, -44, 27, 16, 40, -2, 29, 22, 24, 21, 25, 30, 23, 29, 31, 19)
+# X <- c(28, 26, 33, 24, 34, -44, 27, 16, 40, -2, 29, 22, 24, 21, 25, 30, 23, 29, 31, 19)
+X <- seq(1, 1000, 5)
 # computing median of dataset X
 medX = median(X)
 # computing mean absolute deviation, MAD(x) = Median(|x - median(x)|) 
@@ -11,7 +12,6 @@ madnX = madX / 0.675
 # segma and meu not
 segma = madnX
 meui = medX
-
 
 # helper function
 findSign <- function(x) {
@@ -25,13 +25,13 @@ findSign <- function(x) {
 }
 findSaiSimple <- function(x, k) {
   if (abs(x) <= k) {
-    return (x/x);
+    return (x);
   } else {
     if (k == 0) {
       k = 1;
     }
     sign = findSign(x);
-    return ((sign * k) / x);
+    return ((sign * k));
   }
 }
 findSaiComplex <- function(x, k) {
@@ -43,7 +43,7 @@ findSaiComplex <- function(x, k) {
 findW <- function(x, k) {
   wx = 0
   if (x != 0) {
-    wx = findSaiSimple(x, k);
+    wx = findSaiSimple(x, k) / x;
   } else {
     wx = findSaiComplex(x, k);
   }
@@ -53,17 +53,22 @@ findW <- function(x, k) {
 prevMeui = meui
 k = 0
 while (TRUE) {
-  wki = 0
-  wkiXi = 0
+  sumWiXi = 0
+  sumWi = 0
+  print("wi--start");
   for (i in 1:length(X)) { # 1 to n
-    wki = wki + findW(((X[i] - prevMeui) / segma), k)
-    wkiXi = wkiXi + ( X[i] * wki)
+    sumWiXi = sumWiXi +  (findW(((X[i] - prevMeui) / segma), k) * X[i])
+    print( (findW(((X[i] - prevMeui) / segma), k) * X[i]));
+    sumWi = sumWi + findW(((X[i] - prevMeui) / segma), k);
   }
-  meuki1 = wkiXi / wki;
-  if ((meuki1 - prevMeui) < (0.1 * segma)) {
+  print("wi-end");
+  meuK1 = sumWiXi / sumWi
+  
+  if ((meuK1 - prevMeui) < (0.1 * segma)) {
+    prevMeui = meuK1
     break
   }
-  prevMeui = meuki1
+  prevMeui = meuK1
   k = k + 1
 }
 
