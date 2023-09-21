@@ -21,8 +21,8 @@ compute_correlation <- function(X, Y) {
     sumXSquare = sumXSquare + (X[i] * X[i])
     sumYSquare = sumYSquare + (Y[i] * Y[i])
   }
-  lob <- sumXY - ((sumX * sumY) / n)
-  hor <- sqrt((sumXSquare - ((sumX * sumX) / n)) * (sumYSquare - ((sumY * sumY) / n)))
+  lob <- sumXY - ((sumX * sumY) / n) # hor
+  hor <- sqrt((sumXSquare - ((sumX * sumX) / n)) * (sumYSquare - ((sumY * sumY) / n))) # lob
   return (lob / hor)
 }
 
