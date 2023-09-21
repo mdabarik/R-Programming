@@ -1,6 +1,4 @@
 
-
-
 # built in function
 find_corr <- function(X, Y) {
   return (cor(X, Y))
@@ -23,6 +21,8 @@ compute_correlation <- function(X, Y) {
   }
   lob <- sumXY - ((sumX * sumY) / n) # hor
   hor <- sqrt((sumXSquare - ((sumX * sumX) / n)) * (sumYSquare - ((sumY * sumY) / n))) # lob
+  
+  
   corr <- lob / hor
   coef <- lob / ((n * sumXSquare) - sumX*sumX)
   incept <- (sumY / n) - (coef * (sumX/n))
@@ -48,13 +48,6 @@ H <- c(67, 65, 68, 62, 61)
 W <- c(60, 62, 63, 56, 50)
 find_corr(H, W)
 res <- compute_correlation(H, W)
-res[1]
-res[2]
-res[3]
-
-
-
-
 
 
 
