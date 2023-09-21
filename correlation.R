@@ -8,7 +8,6 @@ find_corr <- function(X, Y) {
 
 # implementation
 compute_correlation <- function(X, Y) {
-  res <- 0 #index1: correlation, index2: coefficient, index3: intercept
   n = length(X)
   sumXY = 0
   sumX = 0
@@ -27,9 +26,20 @@ compute_correlation <- function(X, Y) {
   corr <- lob / hor
   coef <- lob / ((n * sumXSquare) - sumX*sumX)
   incept <- (sumY / n) - (coef * (sumX/n))
+  
+  res <- 0 #index 1: correlation, index 2: coefficient, index 3: intercept
   res[1] = corr;
   res[2] = coef;
-  res[3] = incept
+  res[3] = incept;
+  
+  # printing the result
+  print("r:");
+  print(corr);
+  print("Beta:");
+  print(coef);
+  print("Alpha:")
+  print(incept)
+  
   return (res)
 }
 
