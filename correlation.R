@@ -22,9 +22,9 @@ compute_correlation <- function(X, Y, xgy=TRUE) {
   lob <- sumXY - ((sumX * sumY) / n) # hor
   hor <- sqrt((sumXSquare - ((sumX * sumX) / n)) * (sumYSquare - ((sumY * sumY) / n))) # lob
   
-  
   corr <- lob / hor
   
+  # X given Y and Y given X
   if (xgy == TRUE) {
     coef <- lob / ((n * sumXSquare) - sumX*sumX)
     incept <- (sumY / n) - (coef * (sumX/n))
@@ -54,7 +54,7 @@ H <- c(67, 65, 68, 62, 61)
 W <- c(60, 62, 63, 56, 50)
 find_corr(H, W)
 res1 <- compute_correlation(H, W, xgy=FALSE) #ygx
-res <- compute_correlation(H, W) #xgy
+res2 <- compute_correlation(H, W) #xgy
 
 
 
