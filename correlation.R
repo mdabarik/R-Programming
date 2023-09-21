@@ -5,7 +5,7 @@ find_corr <- function(X, Y) {
 }
 
 # implementation
-compute_correlation <- function(X, Y) {
+compute_correlation <- function(X, Y, xgy=TRUE) {
   n = length(X)
   sumXY = 0
   sumX = 0
@@ -24,8 +24,14 @@ compute_correlation <- function(X, Y) {
   
   
   corr <- lob / hor
-  coef <- lob / ((n * sumXSquare) - sumX*sumX)
-  incept <- (sumY / n) - (coef * (sumX/n))
+  
+  if (xgy == TRUE) {
+    coef <- lob / ((n * sumXSquare) - sumX*sumX)
+    incept <- (sumY / n) - (coef * (sumX/n))
+  } else {
+    coef <- lob / ((n * sumYSquare) - sumY*sumY)
+    incept <- (sumX / n) - (coef * (sumY/n))
+  }
   
   res <- 0 #index 1: correlation, index 2: coefficient, index 3: intercept
   res[1] = corr;
@@ -47,7 +53,8 @@ compute_correlation <- function(X, Y) {
 H <- c(67, 65, 68, 62, 61)
 W <- c(60, 62, 63, 56, 50)
 find_corr(H, W)
-res <- compute_correlation(H, W)
+res1 <- compute_correlation(H, W, xgy=FALSE) #ygx
+res <- compute_correlation(H, W) #xgy
 
 
 
