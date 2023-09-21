@@ -57,19 +57,24 @@ while (TRUE) {
   for (i in 1:length(X)) { # 1 to n
     sumWiXi = sumWiXi +  (findW(((X[i] - prevMeui) / segma), k) * X[i])
     sumWi = sumWi + findW(((X[i] - prevMeui) / segma), k)
+    
   }
   meuK1 = sumWiXi / sumWi
+  print(sumWiXi)
+  print(sumWi)
+  print(meuK1)
+  
   
   if ((meuK1 - prevMeui) < (0.1 * segma)) {
     prevMeui = meuK1
     break
   }
+  
   prevMeui = meuK1
   k = k + 1
 }
 
 print(prevMeui)
-print(k)
 
 
 
