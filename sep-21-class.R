@@ -1,5 +1,5 @@
 
-#The fasting blood sugar FBSx of 10 randomly selectted patients are given below:
+#The fasting blood sugar (FBSx) of 10 randomly selected patients are given below:
 #110,118, 130, 140, 142, 146, 112, 100, 95, 98
 blood_sugar <- c(110, 118, 130, 140, 142, 146, 112, 100, 95, 98)
 
@@ -19,3 +19,9 @@ t_test_result$p.value
 
 # Print the result
 print(t_test_result)
+
+
+
+
+
+
